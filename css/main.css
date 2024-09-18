@@ -56,6 +56,11 @@ p {
 .black {
     color: var(--Almost-Black) !important;
 }
+
+::selection {
+    background-color: var(--Almost-Black);
+    color: var(--Almost-White);
+}
 /* End General Rules */
 
 /* Start Local Rules */
@@ -64,6 +69,7 @@ header .container {
     padding-top: 30px;
     padding-bottom: 30px;
     align-items: center;
+    user-select: none;
 }
 
 header .container .main-links {
