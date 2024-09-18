@@ -15,6 +15,7 @@ body {
   font-family: "Epilogue", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: var(--Almost-White);
 }
 
 * {
@@ -50,17 +51,94 @@ p {
 /* End General Rules */
 
 /* Start Local Rules */
+header .container {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+}
+
+header .container .main-links {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-left: 60px;
+    height: 100%;
+    flex-grow: 1;
+}
+header .container p {
+    color: var(--Medium-Gray);
+    font-weight: 500;
+    font-size: 16px;
+    transition: var(--main-trans);
+    cursor: pointer;
+}
+
+header .container p:hover {
+    color: var(--Almost-Black);
+}
+
+header .container p:hover + i{
+    color: var(--Almost-Black);
+}
+
+header .container .main-links p {
+    display: inline-block;
+}
+
+header .container .main-links i {
+    padding-left: 5px;
+    transition: var(--main-trans);
+    cursor: pointer;
+    color: var(--Medium-Gray);
+    font-size: 14px;
+}
+
+header .container .main-links i:hover {
+    color: var(--Almost-Black);
+}
+
+header .container .registration {
+    display: flex;
+    align-items: center;
+}
+
+header .container .registration div p{
+    padding: 5px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--main-trans);
+}
+
+header .container .registration div p:hover {
+    color: var(--Almost-Black);
+}
+
+header .container .registration div:last-child p {
+    border: 2px solid var(--Almost-Black);
+}
+
 /* End Local Rules */
 
 /* Start Media Queries */
 @media (width <= 769px) {
-    
+    .desktop {
+        display: none !important;
+    }
+
+    header .container {
+        justify-content: space-between;
+    }
 }
 
 /* Container Queries */
 @media (min-width: 769px) {
     .container {
         width: 750px;
+    }
+
+    .mobile {
+        display: none !important;
     }
 }
 
