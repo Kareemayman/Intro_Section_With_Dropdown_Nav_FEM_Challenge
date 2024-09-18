@@ -48,6 +48,14 @@ p {
     font-size: 18px;
     line-height: 1.8;
 }
+
+.invisible {
+    display: none;
+}
+
+.black {
+    color: var(--Almost-Black) !important;
+}
 /* End General Rules */
 
 /* Start Local Rules */
@@ -117,6 +125,54 @@ header .container .registration div p:hover {
 
 header .container .registration div:last-child p {
     border: 2px solid var(--Medium-Gray);
+}
+
+header .container .features {
+    position: relative;
+}
+
+header .container .features .dropdown-menu {
+    background-color: var(--Almost-White);
+    border-radius: 10px;
+    box-shadow: 0 0 30px 1px rgb(218, 218, 218);
+    padding: 25px;
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 0;
+    width: 170px;
+    color: var(--Medium-Gray);
+    font-weight: 500;
+}
+
+header .container .features .dropdown-menu > div {
+    cursor: pointer;
+    transition: var(--main-trans);
+}
+
+header .container .features .dropdown-menu > div:hover p {
+    color: var(--Almost-Black);
+}
+
+header .container .features .dropdown-menu div div {
+    width: 16px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+header .container .features .dropdown-menu div img {
+    max-width: 100%;
+}
+
+header .container .features .dropdown-menu div p {
+    transition: var(--main-trans);
+}
+
+header .container .features .dropdown-menu div p:hover {
+    color: var(--Almost-Black);
+}
+
+header .container .features .dropdown-menu div:not(:last-of-type) {
+    padding-bottom: 10px;
 }
 
 main .container {
